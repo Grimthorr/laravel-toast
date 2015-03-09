@@ -1,0 +1,28 @@
+{
+    "name": "grimthorr/laravel-toast",
+    "description": "Simple toast messages for Laravel 5.",
+    "homepage": "https://github.com/Grimthorr/laravel-toast",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Grimthorr",
+            "email": "phil@hughesbox.co.uk",
+            "homepage": "http://hughesbox.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.*",
+        "illuminate/config": "5.*",
+        "illuminate/database": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grimthorr\\LaravelToast\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "stable"
+}
