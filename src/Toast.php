@@ -53,10 +53,11 @@ class Toast {
      *
      * @param string $message
      * @return $this
+     * @param string $title
      */
-    public function info($message)
+    public function info($message, $title = null)
     {
-        $this->message($message, $this->levels['info']);
+        $this->message($message, $this->levels['info'], $title);
 
         return $this;
     }
@@ -66,10 +67,11 @@ class Toast {
      *
      * @param string $message
      * @return $this
+     * @param string $title
      */
-    public function success($message)
+    public function success($message, $title = null)
     {
-        $this->message($message, $this->levels['success']);
+        $this->message($message, $this->levels['success'], $title);
 
         return $this;
     }
@@ -78,11 +80,12 @@ class Toast {
      * Create an error message.
      *
      * @param string $message
+     * @param string $title
      * @return $this
      */
-    public function error($message)
+    public function error($message, $title = null)
     {
-        $this->message($message, $this->levels['error']);
+        $this->message($message, $this->levels['error'], $title);
 
         return $this;
     }
@@ -91,11 +94,12 @@ class Toast {
      * Create a warning message.
      *
      * @param string $message
+     * @param string $title
      * @return $this
      */
-    public function warning($message)
+    public function warning($message, $title = null)
     {
-        $this->message($message, $this->levels['warning']);
+        $this->message($message, $this->levels['warning'], $title);
 
         return $this;
     }
@@ -105,9 +109,10 @@ class Toast {
      *
      * @param string $message
      * @param string $level
+     * @param string $title
      * @return $this
      */
-    public function message($message, $level = null)
+    public function message($message, $level = null, $title = null)
     {
         if (!isset($level)) {
             $level = $this->levels['default'];
@@ -115,7 +120,8 @@ class Toast {
 
         array_push($this->toasts, [
             'message' => $message,
-            'level' => $level
+            'level' => $level,
+            'title' => $title,
         ]);
         session()->flash('toasts', $this->toasts);
 
