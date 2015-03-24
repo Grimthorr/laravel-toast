@@ -65,41 +65,41 @@ This package includes a couple of views to get you started, they can be publishe
 
 
 ## Usage
-Use the Toast facade (`Toast::`) or the helper function (`toast()->`) to access the methods in this package. You can also chain multiple messages together using method chaining: `toast()->success('done')->info('hello')`.
+Use the Toast facade (`Toast::`) or the helper function (`toast()->`) to access the methods in this package. You can also chain multiple messages together using method chaining: `toast()->success('done')->info('hello')`.  The `title` argument is optional.
 
 #### Message
 ```php
-Toast::message('message', 'level');
-toast()->message('message', 'level');
-toast('message');
+Toast::message('message', 'level', 'title');
+toast()->message('message', 'level', 'title');
+toast('message', 'title');
 ```
 Add a toast to the session. Using `toast('message')` will use the default level.
 
 #### Info
 ```php
-Toast::info('message');
-toast()->info('message');
+Toast::info('message', 'title');
+toast()->info('message', 'title');
 ```
 Add a toast with the `info` level.
 
 #### Success
 ```php
-Toast::success('message');
-toast()->success('message');
+Toast::success('message', 'title');
+toast()->success('message', 'title');
 ```
 Add a toast with the `success` level.
 
 #### Error
 ```php
-Toast::error('message');
-toast()->error('message');
+Toast::error('message', 'title');
+toast()->error('message', 'title');
 ```
 Add a toast with the `error` level.
 
 #### Warning
 ```php
-Toast::warning('message');
-toast()->warning('message');
+Toast::warning('message', 'title');
+toast()->warning('message', 'title');
 ```
 Add a toast with the `warning` level.
 
@@ -128,11 +128,21 @@ Toast::error('oops')
 return Redirect::to('home');
 ```
 
+#### Using the helper function to send a message with a title
+The following adds a toast to the session and then redirects to `home`.
+```php
+// Create the message
+toast('example', 'title goes here');
+
+// Return a HTTP response to initiate the new session
+return Redirect::to('home');
+```
+
 #### Using the helper function to send a message with a custom level
 The following adds a help toast to the session and then redirects to `home`.
 ```php
 // Create the message
-Toast::message('example', 'help');
+toast()->message('example', 'help');
 
 // Return a HTTP response to initiate the new session
 return Redirect::to('home');
