@@ -22,7 +22,7 @@ class Toast {
 
 
     /**
-     * Construction method to inject the current session.
+     * Construction method.
      *
      * @return void
      */
@@ -52,8 +52,8 @@ class Toast {
      * Create an info message.
      *
      * @param string $message
-     * @return $this
      * @param string $title
+     * @return $this
      */
     public function info($message, $title = null)
     {
@@ -66,8 +66,8 @@ class Toast {
      * Create a success message.
      *
      * @param string $message
-     * @return $this
      * @param string $title
+     * @return $this
      */
     public function success($message, $title = null)
     {
