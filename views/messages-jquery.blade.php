@@ -12,7 +12,7 @@
 		};
 
 		@foreach(Session::get('toasts') as $toast)
-			toastr["{{ $toast['level'] }}"]("{{ $toast['message'] }}");
+			toastr["{{ $toast['level'] }}"]("{{ $toast['message'] }}","{{ $toast['title'] }}");
 		@endforeach
 	</script>
 @endif
