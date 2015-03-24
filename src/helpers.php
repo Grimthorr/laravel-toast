@@ -8,7 +8,7 @@ if (!function_exists('toast'))
      * @param string $message
      * @return \Grimthorr\LaravelToast\Toast
      */
-    function toast($message = null)
+    function toast($message = null, $title = null)
     {
         $instance = app('toast');
 
@@ -17,7 +17,7 @@ if (!function_exists('toast'))
         }
 
         if (!is_null($message)) {
-            return $instance->message($message);
+            return $instance->message($message, null, $title);
         }
 
         return $instance;
