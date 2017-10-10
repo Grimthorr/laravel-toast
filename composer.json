@@ -24,5 +24,16 @@
             "src/helpers.php"
         ]
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Grimthorr\\LaravelToast\\ServiceProvider"
+
+            ],
+            "aliases": {
+                "Toast": "Grimthorr\\LaravelToast\\Facade"
+            }
+        }
+    }
 }
