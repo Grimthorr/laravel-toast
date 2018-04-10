@@ -21,11 +21,12 @@ Simple toast messages for Laravel 5.
     'Toast' => 'Grimthorr\LaravelToast\Facade',
   ),
   ```
-
-4. *Optional*: Run `php artisan vendor:publish --provider="Grimthorr\LaravelToast\ServiceProvider" --tag="config"` to publish the config file.
-5. *Optional*: Modify the published configuration file located at `config/laravel-toast.php` to your liking.
-6. *Optional*: Run `php artisan vendor:publish --provider="Grimthorr\LaravelToast\ServiceProvider" --tag="views"` to publish the views.
-7. *Optional*: Modify the published views located at `resources/views/vendor/toast` to your liking.
+  
+4. Include `@include('toast::messages')` or `@include('toast::messages-jquery')` to your layout template.
+5. *Optional*: Run `php artisan vendor:publish --provider="Grimthorr\LaravelToast\ServiceProvider" --tag="config"` to publish the config file.
+6. *Optional*: Modify the published configuration file located at `config/laravel-toast.php` to your liking.
+7. *Optional*: Run `php artisan vendor:publish --provider="Grimthorr\LaravelToast\ServiceProvider" --tag="views"` to publish the views.
+8. *Optional*: Modify the published views located at `resources/views/vendor/toast` to your liking.
 
 
 ## Configuration
