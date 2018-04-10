@@ -3,29 +3,32 @@ Simple toast messages for Laravel 5.
 
 
 ## Installation
-1. Run `composer require grimthorr/laravel-toast` to include this in your project.
-2. Add `'Grimthorr\LaravelToast\ServiceProvider'` to `providers` in `config/app.php`.
+**1.** Run `composer require grimthorr/laravel-toast` to include this in your project.
+
+**2.** *Optional, Laravel 5.4 and below*: Add `'Grimthorr\LaravelToast\ServiceProvider'` to `providers` in `config/app.php`, and add `'Toast' => 'Grimthorr\LaravelToast\Facade'` to `aliases` in `config/app.php`.
 
   ```php
+  // config/app.php
   'providers' => array(
     // ...
     'Grimthorr\LaravelToast\ServiceProvider',
   ),
-  ```
-
-3. Add `'Toast' => 'Grimthorr\LaravelToast\Facade'` to `aliases` in `config/app.php`.
-
-  ```php
+  // ...
   'aliases' => array(
     // ...
     'Toast' => 'Grimthorr\LaravelToast\Facade',
   ),
   ```
+  
+**3.** Include `@include('toast::messages')` or `@include('toast::messages-jquery')` somewhere in your template.
 
-4. *Optional*: Run `php artisan vendor:publish --provider="Grimthorr\LaravelToast\ServiceProvider" --tag="config"` to publish the config file.
-5. *Optional*: Modify the published configuration file located at `config/laravel-toast.php` to your liking.
-6. *Optional*: Run `php artisan vendor:publish --provider="Grimthorr\LaravelToast\ServiceProvider" --tag="views"` to publish the views.
-7. *Optional*: Modify the published views located at `resources/views/vendor/toast` to your liking.
+**4.** *Optional*: Run `php artisan vendor:publish --provider="Grimthorr\LaravelToast\ServiceProvider" --tag="config"` to publish the config file.
+
+**5.** *Optional*: Modify the published configuration file located at `config/laravel-toast.php` to your liking.
+
+**6.** *Optional*: Run `php artisan vendor:publish --provider="Grimthorr\LaravelToast\ServiceProvider" --tag="views"` to publish the views.
+
+**7.** *Optional*: Modify the published views located at `resources/views/vendor/toast` to your liking.
 
 
 ## Configuration
