@@ -29,7 +29,6 @@
         "laravel": {
             "providers": [
                 "Grimthorr\\LaravelToast\\ServiceProvider"
-
             ],
             "aliases": {
                 "Toast": "Grimthorr\\LaravelToast\\Facade"
