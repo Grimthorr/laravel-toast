@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.1.2] - 2018-04-19 12:57 GMT
+- Add function clear for remove all toast messages saved in memory
+
 ## [1.1.1] - 2018-04-10 12:21 GMT
 ##### Added
 - Add package discovery to `composer.json` for Laravel 5.5 (see [#5], thanks @piperone).
