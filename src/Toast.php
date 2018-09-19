@@ -7,7 +7,7 @@ class Toast {
 
     /**
      * The current toasts
-     * 
+     *
      * @var array
      */
     protected $toasts = [];
@@ -127,5 +127,18 @@ class Toast {
 
         return $this;
     }
+
+    /**
+     * Clear toast messages arrays.
+     *
+     * @return $this
+     */
+    public function clear()
+    {
+        $this->toasts = [];
+
+        return $this;
+    }
+
 
 }
