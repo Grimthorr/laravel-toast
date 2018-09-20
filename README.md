@@ -106,12 +106,12 @@ toast()->warning('message', 'title');
 ```
 Add a toast with the `warning` level.
 
-
 #### Clear
 ```php
 Toast::clear();
 ```
-Remove all toast messages saved in memory.
+Remove all pending toast messages from the session.
+
 
 ## Example
 These examples are using the default configuration.
