@@ -19,7 +19,7 @@ Simple toast messages for Laravel 5.
     'Toast' => 'Grimthorr\LaravelToast\Facade',
   ),
   ```
-  
+
 **3.** Include `@include('toast::messages')` or `@include('toast::messages-jquery')` somewhere in your template.
 
 **4.** *Optional*: Run `php artisan vendor:publish --provider="Grimthorr\LaravelToast\ServiceProvider" --tag="config"` to publish the config file.
@@ -59,7 +59,7 @@ This package includes a couple of views to get you started, they can be publishe
   @foreach(Session::get('toasts') as $toast)
     <div class="alert alert-{{ $toast['level'] }}">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      
+
       {{ $toast['message'] }}
     </div>
   @endforeach
@@ -105,6 +105,12 @@ Toast::warning('message', 'title');
 toast()->warning('message', 'title');
 ```
 Add a toast with the `warning` level.
+
+#### Clear
+```php
+Toast::clear();
+```
+Remove all pending toast messages from the session.
 
 
 ## Example

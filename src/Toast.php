@@ -6,8 +6,8 @@ namespace Grimthorr\LaravelToast;
 class Toast {
 
     /**
-     * The current toasts
-     * 
+     * The current toasts.
+     *
      * @var array
      */
     protected $toasts = [];
@@ -123,9 +123,33 @@ class Toast {
             'level' => $level,
             'title' => $title,
         ]);
-        session()->flash('toasts', $this->toasts);
+        $this->flash();
 
         return $this;
+    }
+
+    /**
+     * Clear all pending toasts from the session.
+     *
+     * @return $this
+     */
+    public function clear()
+    {
+        $this->toasts = [];
+        $this->flash();
+
+        return $this;
+    }
+
+    
+    /**
+     * Internal function to flash the session with the pending toasts.
+     *
+     * @return void
+     */
+    private function flash()
+    {
+        session()->flash('toasts', $this->toasts);
     }
 
 }
