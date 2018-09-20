@@ -3,8 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [1.1.2] - 2018-09-19 12:57 GMT
-#### Added
+## [1.1.2] - 2018-09-20 13:38 GMT
+##### Added
 - Add function `clear()` to remove all pending toast messages from the session (see [#9], thanks @tiagozini).
 
 ## [1.1.1] - 2018-04-10 12:21 GMT
