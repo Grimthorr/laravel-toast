@@ -109,6 +109,7 @@ Add a toast with the `warning` level.
 #### Clear
 ```php
 Toast::clear();
+toast()->clear();
 ```
 Remove all pending toast messages from the session.
 
