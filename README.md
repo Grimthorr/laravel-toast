@@ -1,6 +1,10 @@
 # laravel-toast
 Simple toast messages for Laravel 5.
 
+> **Warning**
+> 
+> **This repository has been archived.** It is no longer maintained and can be considered abandoned. While it may work with later versions of Laravel, you should exercise caution while using it to avoid introducing any unexpected security risks.
+
 
 ## Installation
 **1.** Run `composer require grimthorr/laravel-toast` to include this in your project.
